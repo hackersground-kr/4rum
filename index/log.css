@@ -1,0 +1,10 @@
+*{
+    text-decoration-line: none;
+    color: black
+}
+.login{
+        margin-left: 720px;
+}
+.cont{
+    display: flex;
+}

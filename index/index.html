@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cos.css">
+    <title>세로 옆 메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        header {
+            width: 280px;
+            height: 100%;
+            background-color: rgb(13, 1, 21);
+            /*position: fixed;
+            z-index: 1;*/
+            float: left;
+            position: absolute;
+        }
+
+        .logo {
+            width: 280px;
+            height: 100px;
+            margin: 10px auto;
+            border-bottom: 3px double white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+            position: absolute;
+            display: block;
+            color: #ffffff;
+        }
+
+        .nav>li {
+            /*메인메뉴*/
+            height: 50px;
+            width: 200px;
+            line-height: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 3px double white;
+            text-align: center;
+            position: relative;
+            top: 200px;
+            left: 10%;
+        }
+
+        .submenu {
+            /*서브메뉴영역*/
+            width: 150px;
+            height: 100%;
+            left: 250px;
+            top: 0;
+            position: absolute;
+        }
+
+        .submenu>li {
+            /*서브 메뉴종류*/
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            box-sizing: border-box;
+            display: none;
+            background: rgba(8, 8, 8, 0.3);
+            /*border-top: 1px double rgb(8, 8, 8);*/
+        }
+
+        .submenu:nth-child(1) {
+            top: 0;
+            left: 252px;
+        }
+
+        .submenu:nth-child(2) {
+            top: 50;
+            left: 252px;
+        }
+
+        .submenu:nth-child(3) {
+            top: 100;
+            left: 252px;
+            ;
+        }
+
+        .submenu:nth-child(4) {
+            top: 150;
+            left: 252px;
+        }
+    </style>
+    <script src="./code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script>
+
+        $(function () {
+
+            $('.nav>li').mouseover(function () {
+                $(this).find('.submenu>li').stop(true).slideDown(500);
+            }).mouseout(function () {
+                $(this).find('.submenu>li').stop(true).slideUp(500);
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <video class="main-video" loop autoplay width="1600" height="760">
+            <source src="main video.mp4">
+        </video>
+        <div class="logo">B.R.P</div>
+        <ul class="nav">
+            <li><a href="#">이용안내</a>
+                <ul class="submenu">
+                    <li><a href="#">이용방법</a></li>
+                    <li><a href="#">이용시간</a></li>
+                    <li><a href="#">이용요금</a></li>
+                </ul>
+            </li>
+            <li><a href="#">이벤트정보</a>
+                <ul class="submenu">
+                    <li><a href="#">현장이벤트</a></li>
+                    <li><a href="#">온라인 이벤트</a></li>
+                    <li><a href="#">이벤트예약</a></li>
+                </ul>
+            </li>
+            <li><a href="#">프로그램</a>
+                <ul class="submenu">
+                    <li><a href="#">프로그램안내</a></li>
+                    <li><a href="#">온라인예약</a></li>
+                    <li><a href="#">단체예약</a></li>
+                </ul>
+            </li>
+            <li><a href="#">고객센터</a>
+                <ul class="submenu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">자주묻는질문</a></li>
+                    <li><a href="#">자료실</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="log">
+            <li><a href="http://127.0.0.1:5500/login2.html">로그인 &nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+            <li><a href="http://127.0.0.1:5500/signup.html">회원가입</a></li>
+        </div>
+    </header>
+</body>
+
+</html>
+<!--/* $(function () {
+
+            $('.nav>li').mouseover(function () {
+                $(this).find('.submenu>li').stop(true).slideDown(500);
+            }).mouseout(function () {
+                $(this).find('.submenu>li').stop(true).slideUp(500);
+            });
+        });*/
+    -->

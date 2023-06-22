@@ -1,0 +1,10 @@
+*{
+    text-decoration-line: none;
+    color: black;
+}
+.sign{
+    margin-left: 730px;
+}
+.cont{
+    display: flex;
+}
